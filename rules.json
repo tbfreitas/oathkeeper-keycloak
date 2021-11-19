@@ -1,0 +1,33 @@
+[
+  {
+    "id": "api-teste",
+    "version": "",
+    "upstream": {
+      "url": "http://api:8080/",
+      "preserve_host": true,
+      "strip_path": "/api-cogna"
+    },
+    "match": {
+      "url": "http://localhost:4455/api-cogna/<.*>",
+      "methods": ["GET"]
+    },
+    "authenticators": [
+      {
+        "handler": "jwt"
+      }
+    ],
+    "authorizer": {
+      "handler": "allow"
+    },
+    "mutators": [
+      {
+        "handler": "header",
+        "config": {
+          "headers": {
+            "X-User-Email": "{{ .Extra.email }}"
+          }
+        }
+      }
+    ]
+  }
+]

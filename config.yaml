@@ -1,0 +1,76 @@
+serve:
+  proxy:
+    port: 4455 # run the proxy at port 4455
+  api:
+    port: 4456 # run the api at port 4456
+  proxy:
+    timeout:
+      write: 240s
+      idle: 240s
+      read: 240s
+    cors:
+      enabled: true
+      allow_credentials: true
+
+access_rules:
+  repositories:
+    - file://./rules.json
+
+errors:
+  fallback:
+    - json
+
+  handlers:
+    json:
+      enabled: true
+      config:
+          verbose: true
+
+
+mutators:
+  header:
+    enabled: true
+    config:
+      headers:
+        X-User-Subject: '{{ .Subject }}'
+        X-User-Email: '{{ .Extra.email }}'
+        X-User-Username: '{{ .Extra.preferred_username }}'
+        X-User-Name: '{{ .Extra.name }}'
+        # You could add some other headers, for example with data from the
+        # session.
+        # X-Some-Arbitrary-Data: "{{ print .Extra.some.arbitrary.data }}"
+  noop:
+    enabled: true
+
+
+authorizers:
+  allow:
+    enabled: true
+  deny:
+    enabled: true
+
+authenticators:
+  jwt:
+    enabled: true
+    config:
+      jwks_urls:
+        - file://./jwks.json
+      scope_strategy: exact
+      required_scope:
+        - profile
+        - email
+      target_audience:
+        - account 
+      trusted_issuers:
+        - https://keycloak.tarcisio-dev.com.br/auth/realms/develop
+      allowed_algorithms:
+        - RS256
+      token_from:
+        header: Authorization
+        
+  noop:
+    enabled: false
+  anonymous:
+    enabled: true
+    config:
+      subject: guest
