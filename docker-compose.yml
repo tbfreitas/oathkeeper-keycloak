@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo-comp
+      MONGO_INITDB_ROOT_PASSWORD: Comp123
