@@ -1,6 +1,9 @@
 package structs
 
 type DefaultResponse struct {
-	Nome  string `json:"nome"`
-	Idade int8   `json:"idade"`
+	Name    string `json:"nome"`
+	Age     int8   `json:"idade"`
+	Job     string `json:"job"`
+	Country string `json:"country"`
+	City    string `json:"city"`
 }
