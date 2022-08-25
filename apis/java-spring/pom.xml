@@ -18,8 +18,8 @@
     <description>Api utilizando com.spring pra POC com keyclok</description>
 
     <properties>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <start-class>com.spring.JavaSpring</start-class>

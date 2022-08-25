@@ -1,14 +1,45 @@
 [
   {
-    "id": "api-teste",
-    "version": "",
+    "id": "spring-api",
+    "version": "v1.0.0",
     "upstream": {
-      "url": "http://api:8080/",
-      "preserve_host": true,
-      "strip_path": "/api-cogna"
+      "url": "http://spring-api:8080",
+      "strip_path": "/spring-api",
+      "preserve_host": true
     },
     "match": {
-      "url": "http://localhost:4455/api-cogna/<.*>",
+      "url": "http://localhost:4455/spring-api/<.*>",
+      "methods": ["GET"]
+    },
+    "authenticators": [
+      {
+        "handler": "jwt"
+      }
+    ],
+    "authorizer": {
+      "handler": "allow"
+    },
+    "mutators": [
+      {
+        "handler": "header",
+        "config": {
+          "headers": {
+            "X-User-Email": "{{ .Extra.email }}"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "go-api",
+    "version": "v1.0.0",
+    "upstream": {
+      "url": "http://go-api:8080",
+      "strip_path": "/api-golang",
+      "preserve_host": true
+    },
+    "match": {
+      "url": "http://localhost:4455/api-golang/<.*>",
       "methods": ["GET"]
     },
     "authenticators": [

@@ -2,6 +2,7 @@ package com.spring.model;
 
 public class Person {
 
+    private string Language;
     private String Name;
     private String City;
     private String Job;
@@ -9,13 +10,29 @@ public class Person {
     private int Age;
     private String Country;
 
-    public Person(String name, String city, String job, int age, String country) {
-        Name = name;
-        City = city;
-        Job = job;
-        Age = age;
-        Country = country;
+    public Person(
+        String language,
+        String name, 
+        String city, 
+        String job, 
+        int age, 
+        String country
+        ) {
+            Language = Language;
+            Name = name;
+            City = city;
+            Job = job;
+            Age = age;
+            Country = country;
     }
+
+    public String getLanguage() {
+        return Language;
+    }   
+
+    public void setLanguage(String language) {
+        Language = language;
+    }    
 
     public String getName() {
         return Name;

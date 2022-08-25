@@ -62,7 +62,7 @@ authenticators:
       target_audience:
         - account 
       trusted_issuers:
-        - https://keycloak.tarcisio-dev.com.br/auth/realms/develop
+        - http://localhost:8080/auth/realms/master
       allowed_algorithms:
         - RS256
       token_from:

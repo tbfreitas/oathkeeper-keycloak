@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ResponseTeste  {
 
-    @GetMapping("/response-spring")
+    @GetMapping("/dev-info")
     public ResponseEntity<Person> index() {
 
         Person pessoa = new Person(
