@@ -1,6 +1,23 @@
 version: "3.5"
 
 services:
+
+  # Auth-image #####################
+  keycloak:
+    image: jboss/keycloak
+    container_name: keycloak
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin123
+    ports:
+      - 8080:8080
+    networks:
+      - custom_network
+  ##################################
+
+  # APIS-images ###################################
+
+  ## Golang API ##
   go-api:
     build: ./apis/go-gyn
     container_name: go-api
@@ -10,6 +27,7 @@ services:
     networks:
       - custom_network
 
+  ### JAVA API ###
   spring-api:
     build: ./apis/java-spring
     container_name: spring-api
@@ -18,7 +36,9 @@ services:
       - "8085:8080"
     networks:
       - custom_network
-    
+  ##################################
+
+  # Proxy from Ory #################
   oath-keeper:
     build: ./oath-image
     command: -c /config.yaml serve
@@ -29,26 +49,7 @@ services:
       - "4456:4456"
     networks:
       - custom_network
-
-  keykloak:
-    image: jboss/keycloak
-    container_name: keycloak
-    environment:
-      - KEYCLOAK_USER=admin
-      - KEYCLOAK_PASSWORD=admin123
-    ports:
-      - 8080:8080
-    networks:
-      - custom_network
-    
-  portainer:
-    container_name: portainer
-    ports:
-      - 9000:9000
-    image: portainer/portainer-ce:latest
-    restart: always
-    networks:
-      - custom_network
+  ##################################
 
 networks:
   custom_network:

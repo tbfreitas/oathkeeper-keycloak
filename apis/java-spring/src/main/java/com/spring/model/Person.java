@@ -2,7 +2,7 @@ package com.spring.model;
 
 public class Person {
 
-    private string Language;
+    private String Language;
     private String Name;
     private String City;
     private String Job;
