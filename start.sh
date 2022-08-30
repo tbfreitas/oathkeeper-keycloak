@@ -14,5 +14,5 @@ done
 curl -v http://localhost:8080/auth/realms/master/protocol/openid-connect/certs > ./oath-image/jwks.json
 
 # Starting all the remaining services
-docker-compose up --build -d go-api spring-api oath-keeper portainer
+docker-compose up --build -d go-api spring-api oath-keeper
 
