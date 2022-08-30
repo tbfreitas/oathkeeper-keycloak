@@ -10,14 +10,12 @@ Using a open source project as a auth module[Keycloak], to generate a valid Json
 
 
 ## Keycloak 
-___________________________________________
 
 An excelent free auth module, wrote in Java, as we can see on its web page. [keycloak-page](https://www.keycloak.org/). 
 
 Its over APACHE2.0 license. Thus, in case you wanna try it, read the license doc.
 
 ## Ory Oathkeeper
-___________________________________________
 
 "Ory is the largest open source community in the world for cloud software application security". [ory-page](https://www.ory.sh/docs/welcome). 
 
