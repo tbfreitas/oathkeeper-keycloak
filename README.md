@@ -76,11 +76,23 @@ Done for now. Lets test the Oauth2 flow using admin user and the my-client scope
 
     localhost:8080/auth/realms/master/protocol/openid-connect/token
 
-We are using OpenID Connection, what allow us make this type of requisition.
+And using Form URL Encodend, we send:
+
+```
+    {
+        username: admin,
+        password: admin123,
+        client_id: my-client,
+        client_secret: {past_secret_here},
+        grant_type: password
+    }
+```
 
 3. Check if you got a __200__ status Request with a valid JWT:
 
 ![login page](imgs/token.png)
+
+* We are using OpenID Connection, what allow us make this type of requisition. 
 
 ### Testing Ory Proxy
 
