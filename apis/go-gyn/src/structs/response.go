@@ -1,10 +1,12 @@
 package structs
 
-type DefaultResponse struct {
-	Language string `json:"language"`
-	Name     string `json:"nome"`
-	Age      int8   `json:"idade"`
-	Job      string `json:"job"`
-	Country  string `json:"country"`
-	City     string `json:"city"`
+type Cities struct {
+	Cities []City `json:"cities"`
+}
+
+type City struct {
+	Name      string `json:"name"`
+	Age       int16  `json:"age"`
+	Country   string `json:"country"`
+	IsCapital bool   `json:"is_capital"`
 }

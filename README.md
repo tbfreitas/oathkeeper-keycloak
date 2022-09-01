@@ -96,6 +96,31 @@ And using Form URL Encodend, we send:
 
 ### Testing Ory Proxy
 
+Until this point, all we got is a functional auth module. With Ory Oathkeeper well pointed and seted by the files _jwks_ and _rules_ files, we are ready to test our embedded APIs. 
+
+1. Lets make a GET requisition to _http://localhost:4455/spring-api/dev-info_ with no valid token: 
+
+![login page](imgs/401.png)
+
+2. We are passing throught Ory Proxy(:4455) to receive any response from API. If you wanna do it directly, the ports are being exposed by docker. So, we can make:
+
+![login page](imgs/direct.png)
+
+3. With a valid token on header to fill the Authorization Header, we can get the response from successfull way:
+
+Cities API                 | Cars API
+:-------------------------:|:-------------------------:
+![](imgs/api-cities.png)   |![](imgs/cars.png)
+
+### Thanks
+
+Nice, ham ? Setting up this way, you __wont__ need to embebbed any auth informatoion on server side. Just put any new service on proxy tracker throught the the _rules.json_ file. (read ory docs)
+______________________________
+
+·Tarcísio B F Jr @Brasilia:01-08-2022 
+
+
+
 
 
 
