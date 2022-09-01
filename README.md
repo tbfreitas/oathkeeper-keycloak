@@ -114,7 +114,7 @@ Cities API                 | Cars API
 
 ### Thanks
 
-Nice, ham ? Setting up this way, you __wont__ need to embebbed any auth informatoion on server side. Just put any new service on proxy tracker throught the the _rules.json_ file. (read ory docs)
+Nice, ham ? Setting up this way, you __wont__ need to put any auth informatoion on server side. Just put any new service on proxy tracker throught _rules.json_ file. (read ory docs)
 ______________________________
 
 ·Tarcísio B F Jr @Brasilia:01-08-2022 
