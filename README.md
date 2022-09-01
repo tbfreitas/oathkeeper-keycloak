@@ -25,7 +25,7 @@ Also over APACHE2.0 license.
 
 ## What you need
 
-Have been installed _docker_ and _docker-compose_ in your system is all you need to run the project. [docker-main-page](https://docs.docker.com/engine/install/ubuntu/)
+Have installed _docker_ and _docker-compose_ in your system is all you need to run the project. [docker-main-page](https://docs.docker.com/engine/install/ubuntu/)
 
 Just follow the steps to be able to run any containers you wish over the kernel layer of your system.
 
@@ -35,9 +35,9 @@ As simple as it could be, just open a terminal and type on the root folder of th
 
     ./start.sh
 
-A *.sh* will be executed, raising up four docker containers, to simulate a autenticate local area. Among this containers, two REST apis will be exposed, making necessary a valid token to get the response. But, before check the response over HTTP1.1, we gonna create a keycloak client.
+A *.sh* will be executed, raising up four docker containers, to simulate a autenticate local area. Among this containers, two REST apis will be exposed, making necessary a valid token to get the response. But, before check the response over HTTP1.1, we need create a keycloak client.
 
-Keycloak can be sliced in many environments. But we gonna use what has already come. The allmight _master_. :volcano:
+Keycloak can be sliced in how environments you wish. But we gonna use what has already come. The allmight _master_. :volcano:
 
 ### Creating a keycloak client
 
@@ -98,7 +98,7 @@ And using Form URL Encodend, we send:
 
 Until this point, all we got is a functional auth module. With Ory Oathkeeper well pointed and seted by the files _jwks_ and _rules_ files, we are ready to test our embedded APIs. 
 
-1. Lets make a GET requisition to _http://localhost:4455/spring-api/dev-info_ with no valid token: 
+1. Lets make a GET requisition to _http://localhost:4455/spring-api/v1/cars_ with no valid token: 
 
 ![login page](imgs/401.png)
 
