@@ -51,9 +51,9 @@ Keycloak can be sliced in many environments. But we gonna use what has already c
 
 3. Lets create a client named __my-client__:
 
-![login page](imgs/user_and_pass.png)
+![login page](imgs/my-client.png)
 
-4. Lets change to confidential option, so we must use the Client Id and the Secret Id as part of the authentication.
+4. Lets change to _confidential_ option, so we must use the Client Id and the Secret Id as part of the authentication.
 
 ![login page](imgs/confidential.png)
 
