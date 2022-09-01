@@ -25,7 +25,7 @@ Also over APACHE2.0 license.
 
 ## What you need
 
-Install _docker_ and _docker-compose_ in your system is all you need to run the project. [docker-main-page](https://docs.docker.com/engine/install/ubuntu/)
+Have been installed _docker_ and _docker-compose_ in your system is all you need to run the project. [docker-main-page](https://docs.docker.com/engine/install/ubuntu/)
 
 Just follow the steps to be able to run any containers you wish over the kernel layer of your system.
 
