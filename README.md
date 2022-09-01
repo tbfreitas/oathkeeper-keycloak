@@ -39,5 +39,59 @@ A *.sh* will be executed, raising up four docker containers, to simulate a auten
 
 Keycloak can be sliced in many environments. But we gonna use what has already come. The allmight _master_. :volcano:
 
+### Creating a keycloak client
 
-{WIP}
+1. Let put hands on. Open your browse in localhost:8080 as showned below:
+
+![login page](imgs/keycloak-inicial.png)
+
+On admin console, type __admin__ as user and __admin123__ as password (set of docker-compose).
+
+2. ![login page](imgs/user_and_pass.png)
+
+3. Lets create a client named __my-client__:
+
+![login page](imgs/user_and_pass.png)
+
+4. Lets change to confidential option, so we must use the Client Id and the Secret Id as part of the authentication.
+
+![login page](imgs/confidential.png)
+
+* You need to enter a valid URI redirect page. In any case, just type _localhost_ to pass by this option.
+
+5. Get the client and secret values on _Credential_ TAB:
+
+![login page](imgs/client-secret.png)
+
+Done for now. Lets test the Oauth2 flow using admin user and the my-client scope.
+
+### Testing Authorization
+
+1. Install a UI to http request. _Postman_ and _Insomnia_ are great options.
+
+* https://www.postman.com/
+* https://insomnia.rest/
+
+2. Lets get a valid JWT sending a POST request to:
+
+    localhost:8080/auth/realms/master/protocol/openid-connect/token
+
+We are using OpenID Connection, what allow us make this type of requisition.
+
+3. Check if you got a __200__ status Request with a valid JWT:
+
+![login page](imgs/token.png)
+
+### Testing Ory Proxy
+
+
+
+
+
+
+
+
+
+
+
+
