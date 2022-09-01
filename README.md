@@ -41,13 +41,13 @@ Keycloak can be sliced in many environments. But we gonna use what has already c
 
 ### Creating a keycloak client
 
-1. Let put hands on. Open your browse in localhost:8080 as showned below:
+1. Let put hands on. Open your browse in _localhost:8080_ as showned below:
 
 ![login page](imgs/keycloak-inicial.png)
 
-On admin console, type __admin__ as user and __admin123__ as password (set of docker-compose).
+2. On admin console, type __admin__ as user and __admin123__ as password (set of docker-compose).
 
-2. ![login page](imgs/user_and_pass.png)
+![login page](imgs/user_and_pass.png)
 
 3. Lets create a client named __my-client__:
 
