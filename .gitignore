@@ -1,1 +1,4 @@
 /oath-image/jwks.json
+
+/apis/java-spring/target
+/apis/java-spring/.idea
