@@ -1,6 +1,6 @@
 # About
 
-Hello, have you been listen about OAUTH2 ? And do you know what is a proxy ?
+Hello, have you heard about OAUTH2 ? And do you know what a proxy is?
 
 In this simple, but teachable project, we can reach the main concepts of them. 
 
