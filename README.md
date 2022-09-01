@@ -104,13 +104,13 @@ Until this point, all we got is a functional auth module. With Ory Oathkeeper we
 
 2. We are passing throught Ory Proxy(:4455) to receive any response from API. If you wanna do it directly, the ports are being exposed by docker. So, we can make:
 
-![login page](imgs/direct.png)
+![login page](imgs/direct-get.png)
 
 3. With a valid token on header to fill the Authorization Header, we can get the response from successfull way:
 
 Cities API                 | Cars API
 :-------------------------:|:-------------------------:
-![](imgs/api-cities.png)   |![](imgs/cars.png)
+![](imgs/api-cities.png)   |![](imgs/cars-new.png)
 
 ### Thanks
 
