@@ -1,3 +1,6 @@
+# creating network
+docker network create poc
+
 # Starting keycloak
 docker-compose up --build -d keycloak
 

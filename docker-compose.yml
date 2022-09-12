@@ -51,17 +51,6 @@ services:
       - custom_network
   ##################################
 
-  # Client side As front end #################
-  client:
-    build: ./client
-    container_name: client
-    restart: always
-    ports:
-      - "8081:80"
-    networks:
-      - custom_network
-  ##################################
-
 networks:
   custom_network:
     external:
